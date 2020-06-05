@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.s1TSE = new System.Windows.Forms.PictureBox();
             this.s2TSE = new System.Windows.Forms.PictureBox();
             this.s1TSD = new System.Windows.Forms.PictureBox();
@@ -101,6 +103,25 @@
             this.stanjeSr1TSE = new System.Windows.Forms.Label();
             this.ispravnostSr2TSE = new System.Windows.Forms.Label();
             this.stanjeSr2TSE = new System.Windows.Forms.Label();
+            this.izbornik = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sabirničkiRastavljačToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.izlazniRastavljačToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rastavljačUzemljenjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aPUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.distantnaZaštitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nadstrujnaZaštitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.sR1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sR2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.prikazTrenutnihSignala = new System.Windows.Forms.Button();
+            this.prikazSvihSignala = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.s1TSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s2TSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s1TSD)).BeginInit();
@@ -139,6 +160,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvRuTSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSE)).BeginInit();
+            this.izbornik.SuspendLayout();
             this.SuspendLayout();
             // 
             // s1TSE
@@ -213,6 +235,7 @@
             this.srTSD.TabIndex = 7;
             this.srTSD.Text = "Uključi SR";
             this.srTSD.UseVisualStyleBackColor = true;
+            this.srTSD.Click += new System.EventHandler(this.srTSD_Click);
             // 
             // prTSD
             // 
@@ -247,9 +270,9 @@
             // s1srTSD
             // 
             this.s1srTSD.BackColor = System.Drawing.Color.Green;
-            this.s1srTSD.Location = new System.Drawing.Point(204, 57);
+            this.s1srTSD.Location = new System.Drawing.Point(204, 58);
             this.s1srTSD.Name = "s1srTSD";
-            this.s1srTSD.Size = new System.Drawing.Size(16, 95);
+            this.s1srTSD.Size = new System.Drawing.Size(16, 91);
             this.s1srTSD.TabIndex = 11;
             this.s1srTSD.TabStop = false;
             // 
@@ -342,18 +365,18 @@
             // s1sr1TSE
             // 
             this.s1sr1TSE.BackColor = System.Drawing.Color.Green;
-            this.s1sr1TSE.Location = new System.Drawing.Point(961, 99);
+            this.s1sr1TSE.Location = new System.Drawing.Point(961, 100);
             this.s1sr1TSE.Name = "s1sr1TSE";
-            this.s1sr1TSE.Size = new System.Drawing.Size(16, 51);
+            this.s1sr1TSE.Size = new System.Drawing.Size(16, 49);
             this.s1sr1TSE.TabIndex = 21;
             this.s1sr1TSE.TabStop = false;
             // 
             // s2sr2TSE
             // 
             this.s2sr2TSE.BackColor = System.Drawing.Color.Green;
-            this.s2sr2TSE.Location = new System.Drawing.Point(1126, 57);
+            this.s2sr2TSE.Location = new System.Drawing.Point(1126, 58);
             this.s2sr2TSE.Name = "s2sr2TSE";
-            this.s2sr2TSE.Size = new System.Drawing.Size(16, 93);
+            this.s2sr2TSE.Size = new System.Drawing.Size(16, 91);
             this.s2sr2TSE.TabIndex = 22;
             this.s2sr2TSE.TabStop = false;
             // 
@@ -491,73 +514,73 @@
             // 
             // srprTSD
             // 
-            this.srprTSD.Location = new System.Drawing.Point(204, 182);
+            this.srprTSD.Location = new System.Drawing.Point(204, 183);
             this.srprTSD.Name = "srprTSD";
-            this.srprTSD.Size = new System.Drawing.Size(16, 93);
+            this.srprTSD.Size = new System.Drawing.Size(16, 91);
             this.srprTSD.TabIndex = 37;
             this.srprTSD.TabStop = false;
             // 
             // prirTSD
             // 
-            this.prirTSD.Location = new System.Drawing.Point(204, 307);
+            this.prirTSD.Location = new System.Drawing.Point(204, 308);
             this.prirTSD.Name = "prirTSD";
-            this.prirTSD.Size = new System.Drawing.Size(16, 93);
+            this.prirTSD.Size = new System.Drawing.Size(16, 91);
             this.prirTSD.TabIndex = 38;
             this.prirTSD.TabStop = false;
             // 
             // srprTSE
             // 
-            this.srprTSE.Location = new System.Drawing.Point(1043, 182);
+            this.srprTSE.Location = new System.Drawing.Point(1043, 183);
             this.srprTSE.Name = "srprTSE";
-            this.srprTSE.Size = new System.Drawing.Size(16, 93);
+            this.srprTSE.Size = new System.Drawing.Size(16, 91);
             this.srprTSE.TabIndex = 39;
             this.srprTSE.TabStop = false;
             // 
             // prirTSE
             // 
-            this.prirTSE.Location = new System.Drawing.Point(1043, 307);
+            this.prirTSE.Location = new System.Drawing.Point(1043, 308);
             this.prirTSE.Name = "prirTSE";
-            this.prirTSE.Size = new System.Drawing.Size(16, 93);
+            this.prirTSE.Size = new System.Drawing.Size(16, 91);
             this.prirTSE.TabIndex = 40;
             this.prirTSE.TabStop = false;
             // 
             // irruTSD
             // 
-            this.irruTSD.Location = new System.Drawing.Point(204, 432);
+            this.irruTSD.Location = new System.Drawing.Point(204, 433);
             this.irruTSD.Name = "irruTSD";
-            this.irruTSD.Size = new System.Drawing.Size(16, 118);
+            this.irruTSD.Size = new System.Drawing.Size(16, 116);
             this.irruTSD.TabIndex = 41;
             this.irruTSD.TabStop = false;
             // 
             // irruTSE
             // 
-            this.irruTSE.Location = new System.Drawing.Point(1043, 432);
+            this.irruTSE.Location = new System.Drawing.Point(1043, 433);
             this.irruTSE.Name = "irruTSE";
-            this.irruTSE.Size = new System.Drawing.Size(16, 118);
+            this.irruTSE.Size = new System.Drawing.Size(16, 116);
             this.irruTSE.TabIndex = 42;
             this.irruTSE.TabStop = false;
             // 
             // sr1srTSE
             // 
-            this.sr1srTSE.Location = new System.Drawing.Point(985, 158);
+            this.sr1srTSE.Location = new System.Drawing.Point(986, 158);
             this.sr1srTSE.Name = "sr1srTSE";
-            this.sr1srTSE.Size = new System.Drawing.Size(50, 16);
+            this.sr1srTSE.Size = new System.Drawing.Size(48, 16);
             this.sr1srTSE.TabIndex = 43;
             this.sr1srTSE.TabStop = false;
             // 
             // sr2srTSE
             // 
-            this.sr2srTSE.Location = new System.Drawing.Point(1067, 158);
+            this.sr2srTSE.Location = new System.Drawing.Point(1068, 158);
             this.sr2srTSE.Name = "sr2srTSE";
-            this.sr2srTSE.Size = new System.Drawing.Size(51, 16);
+            this.sr2srTSE.Size = new System.Drawing.Size(49, 16);
             this.sr2srTSE.TabIndex = 44;
             this.sr2srTSE.TabStop = false;
             // 
             // dvRuTSD
             // 
-            this.dvRuTSD.Location = new System.Drawing.Point(228, 558);
+            this.dvRuTSD.Location = new System.Drawing.Point(229, 558);
             this.dvRuTSD.Name = "dvRuTSD";
-            this.dvRuTSD.Size = new System.Drawing.Size(122, 16);
+            this.dvRuTSD.Size = new System.Drawing.Size(120, 16);
             this.dvRuTSD.TabIndex = 45;
             this.dvRuTSD.TabStop = false;
             // 
@@ -582,26 +605,26 @@
             // uRuTSD
             // 
             this.uRuTSD.BackColor = System.Drawing.Color.Gold;
-            this.uRuTSD.Location = new System.Drawing.Point(380, 558);
+            this.uRuTSD.Location = new System.Drawing.Point(381, 558);
             this.uRuTSD.Name = "uRuTSD";
-            this.uRuTSD.Size = new System.Drawing.Size(122, 16);
+            this.uRuTSD.Size = new System.Drawing.Size(120, 16);
             this.uRuTSD.TabIndex = 48;
             this.uRuTSD.TabStop = false;
             // 
             // pictureBox18
             // 
             this.pictureBox18.BackColor = System.Drawing.Color.Gold;
-            this.pictureBox18.Location = new System.Drawing.Point(760, 559);
+            this.pictureBox18.Location = new System.Drawing.Point(761, 559);
             this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(122, 16);
+            this.pictureBox18.Size = new System.Drawing.Size(120, 16);
             this.pictureBox18.TabIndex = 49;
             this.pictureBox18.TabStop = false;
             // 
             // dvRuTSE
             // 
-            this.dvRuTSE.Location = new System.Drawing.Point(914, 559);
+            this.dvRuTSE.Location = new System.Drawing.Point(915, 559);
             this.dvRuTSE.Name = "dvRuTSE";
-            this.dvRuTSE.Size = new System.Drawing.Size(121, 16);
+            this.dvRuTSE.Size = new System.Drawing.Size(119, 16);
             this.dvRuTSE.TabIndex = 50;
             this.dvRuTSE.TabStop = false;
             // 
@@ -627,17 +650,17 @@
             // 
             // dvTsTSD
             // 
-            this.dvTsTSD.Location = new System.Drawing.Point(204, 582);
+            this.dvTsTSD.Location = new System.Drawing.Point(204, 583);
             this.dvTsTSD.Name = "dvTsTSD";
-            this.dvTsTSD.Size = new System.Drawing.Size(16, 48);
+            this.dvTsTSD.Size = new System.Drawing.Size(16, 46);
             this.dvTsTSD.TabIndex = 53;
             this.dvTsTSD.TabStop = false;
             // 
             // dvTsTSE
             // 
-            this.dvTsTSE.Location = new System.Drawing.Point(1043, 582);
+            this.dvTsTSE.Location = new System.Drawing.Point(1043, 583);
             this.dvTsTSE.Name = "dvTsTSE";
-            this.dvTsTSE.Size = new System.Drawing.Size(16, 48);
+            this.dvTsTSE.Size = new System.Drawing.Size(16, 46);
             this.dvTsTSE.TabIndex = 54;
             this.dvTsTSE.TabStop = false;
             // 
@@ -821,12 +844,163 @@
             this.stanjeSr2TSE.Text = "Stanje:";
             this.stanjeSr2TSE.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
+            // izbornik
+            // 
+            this.izbornik.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tSDToolStripMenuItem,
+            this.toolStripMenuItem1});
+            this.izbornik.Name = "izbornik";
+            this.izbornik.Size = new System.Drawing.Size(100, 48);
+            // 
+            // tSDToolStripMenuItem
+            // 
+            this.tSDToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sabirničkiRastavljačToolStripMenuItem,
+            this.izlazniRastavljačToolStripMenuItem,
+            this.rastavljačUzemljenjaToolStripMenuItem,
+            this.aPUToolStripMenuItem,
+            this.distantnaZaštitaToolStripMenuItem,
+            this.nadstrujnaZaštitaToolStripMenuItem});
+            this.tSDToolStripMenuItem.Name = "tSDToolStripMenuItem";
+            this.tSDToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.tSDToolStripMenuItem.Text = "TS-D";
+            // 
+            // sabirničkiRastavljačToolStripMenuItem
+            // 
+            this.sabirničkiRastavljačToolStripMenuItem.Name = "sabirničkiRastavljačToolStripMenuItem";
+            this.sabirničkiRastavljačToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.sabirničkiRastavljačToolStripMenuItem.Text = "Sabirnički rastavljač";
+            // 
+            // izlazniRastavljačToolStripMenuItem
+            // 
+            this.izlazniRastavljačToolStripMenuItem.Name = "izlazniRastavljačToolStripMenuItem";
+            this.izlazniRastavljačToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.izlazniRastavljačToolStripMenuItem.Text = "Izlazni rastavljač";
+            // 
+            // rastavljačUzemljenjaToolStripMenuItem
+            // 
+            this.rastavljačUzemljenjaToolStripMenuItem.Name = "rastavljačUzemljenjaToolStripMenuItem";
+            this.rastavljačUzemljenjaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.rastavljačUzemljenjaToolStripMenuItem.Text = "Rastavljač uzemljenja";
+            // 
+            // aPUToolStripMenuItem
+            // 
+            this.aPUToolStripMenuItem.Name = "aPUToolStripMenuItem";
+            this.aPUToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.aPUToolStripMenuItem.Text = "APU";
+            // 
+            // distantnaZaštitaToolStripMenuItem
+            // 
+            this.distantnaZaštitaToolStripMenuItem.Name = "distantnaZaštitaToolStripMenuItem";
+            this.distantnaZaštitaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.distantnaZaštitaToolStripMenuItem.Text = "Distantna zaštita";
+            // 
+            // nadstrujnaZaštitaToolStripMenuItem
+            // 
+            this.nadstrujnaZaštitaToolStripMenuItem.Name = "nadstrujnaZaštitaToolStripMenuItem";
+            this.nadstrujnaZaštitaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.nadstrujnaZaštitaToolStripMenuItem.Text = "Nadstrujna zaštita";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
+            this.toolStripMenuItem5,
+            this.toolStripMenuItem6,
+            this.toolStripMenuItem7});
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "TS-E";
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sR1ToolStripMenuItem,
+            this.sR2ToolStripMenuItem});
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem2.Text = "Sabirnički rastavljač";
+            // 
+            // sR1ToolStripMenuItem
+            // 
+            this.sR1ToolStripMenuItem.Name = "sR1ToolStripMenuItem";
+            this.sR1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sR1ToolStripMenuItem.Text = "SR1";
+            this.sR1ToolStripMenuItem.Click += new System.EventHandler(this.sR1ToolStripMenuItem_Click);
+            // 
+            // sR2ToolStripMenuItem
+            // 
+            this.sR2ToolStripMenuItem.Name = "sR2ToolStripMenuItem";
+            this.sR2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sR2ToolStripMenuItem.Text = "SR2";
+            this.sR2ToolStripMenuItem.Click += new System.EventHandler(this.sR2ToolStripMenuItem_Click);
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem3.Text = "Izlazni rastavljač";
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem4.Text = "Rastavljač uzemljenja";
+            // 
+            // toolStripMenuItem5
+            // 
+            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
+            this.toolStripMenuItem5.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem5.Text = "APU";
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem6.Text = "Distantna zaštita";
+            // 
+            // toolStripMenuItem7
+            // 
+            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
+            this.toolStripMenuItem7.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem7.Text = "Nadstrujna zaštita";
+            // 
+            // prikazTrenutnihSignala
+            // 
+            this.prikazTrenutnihSignala.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prikazTrenutnihSignala.Image = global::MPIS.Properties.Resources.DropDownImage;
+            this.prikazTrenutnihSignala.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prikazTrenutnihSignala.Location = new System.Drawing.Point(644, 195);
+            this.prikazTrenutnihSignala.Name = "prikazTrenutnihSignala";
+            this.prikazTrenutnihSignala.Size = new System.Drawing.Size(160, 34);
+            this.prikazTrenutnihSignala.TabIndex = 74;
+            this.prikazTrenutnihSignala.Text = "Prikaz trenutnih signala";
+            this.prikazTrenutnihSignala.UseVisualStyleBackColor = true;
+            this.prikazTrenutnihSignala.Click += new System.EventHandler(this.prikazTrenutnihSignala_Click);
+            // 
+            // prikazSvihSignala
+            // 
+            this.prikazSvihSignala.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prikazSvihSignala.Image = ((System.Drawing.Image)(resources.GetObject("prikazSvihSignala.Image")));
+            this.prikazSvihSignala.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.prikazSvihSignala.Location = new System.Drawing.Point(476, 195);
+            this.prikazSvihSignala.Name = "prikazSvihSignala";
+            this.prikazSvihSignala.Size = new System.Drawing.Size(160, 34);
+            this.prikazSvihSignala.TabIndex = 75;
+            this.prikazSvihSignala.Text = "Prikaz svih signala";
+            this.prikazSvihSignala.UseVisualStyleBackColor = true;
+            this.prikazSvihSignala.Click += new System.EventHandler(this.prikazSvihSignala_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.prikazSvihSignala);
+            this.Controls.Add(this.prikazTrenutnihSignala);
             this.Controls.Add(this.ispravnostSr2TSE);
             this.Controls.Add(this.stanjeSr2TSE);
             this.Controls.Add(this.ispravnostSr1TSE);
@@ -941,6 +1115,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dvRuTSE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSE)).EndInit();
+            this.izbornik.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1021,6 +1196,25 @@
         private System.Windows.Forms.Label stanjeSr1TSE;
         private System.Windows.Forms.Label ispravnostSr2TSE;
         private System.Windows.Forms.Label stanjeSr2TSE;
+        private System.Windows.Forms.ContextMenuStrip izbornik;
+        private System.Windows.Forms.ToolStripMenuItem tSDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sabirničkiRastavljačToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem izlazniRastavljačToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rastavljačUzemljenjaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aPUToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem distantnaZaštitaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nadstrujnaZaštitaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem sR1ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sR2ToolStripMenuItem;
+        private System.Windows.Forms.Button prikazTrenutnihSignala;
+        private System.Windows.Forms.Button prikazSvihSignala;
     }
 }
 
