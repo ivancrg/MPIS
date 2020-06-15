@@ -37,17 +37,17 @@
             this.cvor3 = new System.Windows.Forms.PictureBox();
             this.cvor1 = new System.Windows.Forms.PictureBox();
             this.dv = new System.Windows.Forms.PictureBox();
-            this.srTSD = new System.Windows.Forms.Button();
-            this.prTSD = new System.Windows.Forms.Button();
-            this.irTSD = new System.Windows.Forms.Button();
-            this.ruTSD = new System.Windows.Forms.Button();
+            this.srTSDButton = new System.Windows.Forms.Button();
+            this.prTSDButton = new System.Windows.Forms.Button();
+            this.irTSDButton = new System.Windows.Forms.Button();
+            this.ruTSDButton = new System.Windows.Forms.Button();
             this.s1srTSD = new System.Windows.Forms.PictureBox();
             this.cvor4 = new System.Windows.Forms.PictureBox();
-            this.ruTSE = new System.Windows.Forms.Button();
-            this.irTSE = new System.Windows.Forms.Button();
-            this.prTSE = new System.Windows.Forms.Button();
-            this.sr1TSE = new System.Windows.Forms.Button();
-            this.sr2TSE = new System.Windows.Forms.Button();
+            this.ruTSEButton = new System.Windows.Forms.Button();
+            this.irTSEButton = new System.Windows.Forms.Button();
+            this.prTSEButton = new System.Windows.Forms.Button();
+            this.sr1TSEButton = new System.Windows.Forms.Button();
+            this.sr2TSEButton = new System.Windows.Forms.Button();
             this.cvor5 = new System.Windows.Forms.PictureBox();
             this.cvor7 = new System.Windows.Forms.PictureBox();
             this.cvor6 = new System.Windows.Forms.PictureBox();
@@ -79,7 +79,7 @@
             this.cvor13 = new System.Windows.Forms.PictureBox();
             this.cvor16 = new System.Windows.Forms.PictureBox();
             this.uRuTSD = new System.Windows.Forms.PictureBox();
-            this.pictureBox18 = new System.Windows.Forms.PictureBox();
+            this.uRuTSE = new System.Windows.Forms.PictureBox();
             this.dvRuTSE = new System.Windows.Forms.PictureBox();
             this.uzemljenjeTSD = new System.Windows.Forms.Label();
             this.uzemljenjeTSE = new System.Windows.Forms.Label();
@@ -104,6 +104,7 @@
             this.ispravnostSr2TSE = new System.Windows.Forms.Label();
             this.stanjeSr2TSE = new System.Windows.Forms.Label();
             this.izbornik = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tSDToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sabirničkiRastavljačToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.izlazniRastavljačToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -111,6 +112,7 @@
             this.aPUToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.distantnaZaštitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.nadstrujnaZaštitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
             this.sR1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -122,6 +124,7 @@
             this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.prikazTrenutnihSignala = new System.Windows.Forms.Button();
             this.prikazSvihSignala = new System.Windows.Forms.Button();
+            this.dvButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.s1TSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s2TSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s1TSD)).BeginInit();
@@ -156,7 +159,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cvor13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cvor16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.uRuTSD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uRuTSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvRuTSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSE)).BeginInit();
@@ -226,46 +229,49 @@
             this.dv.TabIndex = 6;
             this.dv.TabStop = false;
             // 
-            // srTSD
+            // srTSDButton
             // 
-            this.srTSD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.srTSD.Location = new System.Drawing.Point(319, 149);
-            this.srTSD.Name = "srTSD";
-            this.srTSD.Size = new System.Drawing.Size(93, 34);
-            this.srTSD.TabIndex = 7;
-            this.srTSD.Text = "Uključi SR";
-            this.srTSD.UseVisualStyleBackColor = true;
-            this.srTSD.Click += new System.EventHandler(this.srTSD_Click);
+            this.srTSDButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.srTSDButton.Location = new System.Drawing.Point(319, 149);
+            this.srTSDButton.Name = "srTSDButton";
+            this.srTSDButton.Size = new System.Drawing.Size(93, 34);
+            this.srTSDButton.TabIndex = 7;
+            this.srTSDButton.Text = "Uključi SR";
+            this.srTSDButton.UseVisualStyleBackColor = true;
+            this.srTSDButton.Click += new System.EventHandler(this.srTSDButton_Click);
             // 
-            // prTSD
+            // prTSDButton
             // 
-            this.prTSD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.prTSD.Location = new System.Drawing.Point(319, 274);
-            this.prTSD.Name = "prTSD";
-            this.prTSD.Size = new System.Drawing.Size(93, 34);
-            this.prTSD.TabIndex = 8;
-            this.prTSD.Text = "Uključi PR";
-            this.prTSD.UseVisualStyleBackColor = true;
+            this.prTSDButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prTSDButton.Location = new System.Drawing.Point(319, 274);
+            this.prTSDButton.Name = "prTSDButton";
+            this.prTSDButton.Size = new System.Drawing.Size(93, 34);
+            this.prTSDButton.TabIndex = 8;
+            this.prTSDButton.Text = "Uključi PR";
+            this.prTSDButton.UseVisualStyleBackColor = true;
+            this.prTSDButton.Click += new System.EventHandler(this.prTSDButton_Click);
             // 
-            // irTSD
+            // irTSDButton
             // 
-            this.irTSD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.irTSD.Location = new System.Drawing.Point(319, 399);
-            this.irTSD.Name = "irTSD";
-            this.irTSD.Size = new System.Drawing.Size(93, 34);
-            this.irTSD.TabIndex = 9;
-            this.irTSD.Text = "Uključi IR";
-            this.irTSD.UseVisualStyleBackColor = true;
+            this.irTSDButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.irTSDButton.Location = new System.Drawing.Point(319, 399);
+            this.irTSDButton.Name = "irTSDButton";
+            this.irTSDButton.Size = new System.Drawing.Size(93, 34);
+            this.irTSDButton.TabIndex = 9;
+            this.irTSDButton.Text = "Uključi IR";
+            this.irTSDButton.UseVisualStyleBackColor = true;
+            this.irTSDButton.Click += new System.EventHandler(this.irTSDButton_Click);
             // 
-            // ruTSD
+            // ruTSDButton
             // 
-            this.ruTSD.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ruTSD.Location = new System.Drawing.Point(319, 584);
-            this.ruTSD.Name = "ruTSD";
-            this.ruTSD.Size = new System.Drawing.Size(93, 34);
-            this.ruTSD.TabIndex = 10;
-            this.ruTSD.Text = "Uključi RU";
-            this.ruTSD.UseVisualStyleBackColor = true;
+            this.ruTSDButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ruTSDButton.Location = new System.Drawing.Point(319, 584);
+            this.ruTSDButton.Name = "ruTSDButton";
+            this.ruTSDButton.Size = new System.Drawing.Size(93, 34);
+            this.ruTSDButton.TabIndex = 10;
+            this.ruTSDButton.Text = "Uključi RU";
+            this.ruTSDButton.UseVisualStyleBackColor = true;
+            this.ruTSDButton.Click += new System.EventHandler(this.ruTSDButton_Click);
             // 
             // s1srTSD
             // 
@@ -285,55 +291,60 @@
             this.cvor4.TabIndex = 12;
             this.cvor4.TabStop = false;
             // 
-            // ruTSE
+            // ruTSEButton
             // 
-            this.ruTSE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ruTSE.Location = new System.Drawing.Point(852, 584);
-            this.ruTSE.Name = "ruTSE";
-            this.ruTSE.Size = new System.Drawing.Size(93, 34);
-            this.ruTSE.TabIndex = 16;
-            this.ruTSE.Text = "Uključi RU";
-            this.ruTSE.UseVisualStyleBackColor = true;
+            this.ruTSEButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.ruTSEButton.Location = new System.Drawing.Point(852, 584);
+            this.ruTSEButton.Name = "ruTSEButton";
+            this.ruTSEButton.Size = new System.Drawing.Size(93, 34);
+            this.ruTSEButton.TabIndex = 16;
+            this.ruTSEButton.Text = "Uključi RU";
+            this.ruTSEButton.UseVisualStyleBackColor = true;
+            this.ruTSEButton.Click += new System.EventHandler(this.ruTSEButton_Click);
             // 
-            // irTSE
+            // irTSEButton
             // 
-            this.irTSE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.irTSE.Location = new System.Drawing.Point(852, 399);
-            this.irTSE.Name = "irTSE";
-            this.irTSE.Size = new System.Drawing.Size(93, 34);
-            this.irTSE.TabIndex = 15;
-            this.irTSE.Text = "Uključi IR";
-            this.irTSE.UseVisualStyleBackColor = true;
+            this.irTSEButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.irTSEButton.Location = new System.Drawing.Point(852, 399);
+            this.irTSEButton.Name = "irTSEButton";
+            this.irTSEButton.Size = new System.Drawing.Size(93, 34);
+            this.irTSEButton.TabIndex = 15;
+            this.irTSEButton.Text = "Uključi IR";
+            this.irTSEButton.UseVisualStyleBackColor = true;
+            this.irTSEButton.Click += new System.EventHandler(this.irTSEButton_Click);
             // 
-            // prTSE
+            // prTSEButton
             // 
-            this.prTSE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.prTSE.Location = new System.Drawing.Point(852, 274);
-            this.prTSE.Name = "prTSE";
-            this.prTSE.Size = new System.Drawing.Size(93, 34);
-            this.prTSE.TabIndex = 14;
-            this.prTSE.Text = "Uključi PR";
-            this.prTSE.UseVisualStyleBackColor = true;
+            this.prTSEButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.prTSEButton.Location = new System.Drawing.Point(852, 274);
+            this.prTSEButton.Name = "prTSEButton";
+            this.prTSEButton.Size = new System.Drawing.Size(93, 34);
+            this.prTSEButton.TabIndex = 14;
+            this.prTSEButton.Text = "Uključi PR";
+            this.prTSEButton.UseVisualStyleBackColor = true;
+            this.prTSEButton.Click += new System.EventHandler(this.prTSEButton_Click);
             // 
-            // sr1TSE
+            // sr1TSEButton
             // 
-            this.sr1TSE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sr1TSE.Location = new System.Drawing.Point(852, 149);
-            this.sr1TSE.Name = "sr1TSE";
-            this.sr1TSE.Size = new System.Drawing.Size(93, 34);
-            this.sr1TSE.TabIndex = 13;
-            this.sr1TSE.Text = "Uključi SR1";
-            this.sr1TSE.UseVisualStyleBackColor = true;
+            this.sr1TSEButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sr1TSEButton.Location = new System.Drawing.Point(852, 149);
+            this.sr1TSEButton.Name = "sr1TSEButton";
+            this.sr1TSEButton.Size = new System.Drawing.Size(93, 34);
+            this.sr1TSEButton.TabIndex = 13;
+            this.sr1TSEButton.Text = "Uključi SR1";
+            this.sr1TSEButton.UseVisualStyleBackColor = true;
+            this.sr1TSEButton.Click += new System.EventHandler(this.sr1TSEButton_Click);
             // 
-            // sr2TSE
+            // sr2TSEButton
             // 
-            this.sr2TSE.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.sr2TSE.Location = new System.Drawing.Point(1159, 149);
-            this.sr2TSE.Name = "sr2TSE";
-            this.sr2TSE.Size = new System.Drawing.Size(93, 34);
-            this.sr2TSE.TabIndex = 17;
-            this.sr2TSE.Text = "Uključi SR2";
-            this.sr2TSE.UseVisualStyleBackColor = true;
+            this.sr2TSEButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.sr2TSEButton.Location = new System.Drawing.Point(1159, 149);
+            this.sr2TSEButton.Name = "sr2TSEButton";
+            this.sr2TSEButton.Size = new System.Drawing.Size(93, 34);
+            this.sr2TSEButton.TabIndex = 17;
+            this.sr2TSEButton.Text = "Uključi SR2";
+            this.sr2TSEButton.UseVisualStyleBackColor = true;
+            this.sr2TSEButton.Click += new System.EventHandler(this.sr2TSEButton_Click);
             // 
             // cvor5
             // 
@@ -611,14 +622,14 @@
             this.uRuTSD.TabIndex = 48;
             this.uRuTSD.TabStop = false;
             // 
-            // pictureBox18
+            // uRuTSE
             // 
-            this.pictureBox18.BackColor = System.Drawing.Color.Gold;
-            this.pictureBox18.Location = new System.Drawing.Point(761, 559);
-            this.pictureBox18.Name = "pictureBox18";
-            this.pictureBox18.Size = new System.Drawing.Size(120, 16);
-            this.pictureBox18.TabIndex = 49;
-            this.pictureBox18.TabStop = false;
+            this.uRuTSE.BackColor = System.Drawing.Color.Gold;
+            this.uRuTSE.Location = new System.Drawing.Point(761, 559);
+            this.uRuTSE.Name = "uRuTSE";
+            this.uRuTSE.Size = new System.Drawing.Size(120, 16);
+            this.uRuTSE.TabIndex = 49;
+            this.uRuTSE.TabStop = false;
             // 
             // dvRuTSE
             // 
@@ -746,23 +757,23 @@
             // 
             // ispravnostRuTSE
             // 
-            this.ispravnostRuTSE.AutoSize = true;
             this.ispravnostRuTSE.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.ispravnostRuTSE.Location = new System.Drawing.Point(677, 604);
+            this.ispravnostRuTSE.Location = new System.Drawing.Point(727, 604);
             this.ispravnostRuTSE.Name = "ispravnostRuTSE";
-            this.ispravnostRuTSE.Size = new System.Drawing.Size(65, 19);
+            this.ispravnostRuTSE.Size = new System.Drawing.Size(123, 19);
             this.ispravnostRuTSE.TabIndex = 64;
             this.ispravnostRuTSE.Text = "Ispravno:";
+            this.ispravnostRuTSE.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // stanjeRuTSE
             // 
-            this.stanjeRuTSE.AutoSize = true;
             this.stanjeRuTSE.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.stanjeRuTSE.Location = new System.Drawing.Point(677, 582);
+            this.stanjeRuTSE.Location = new System.Drawing.Point(727, 584);
             this.stanjeRuTSE.Name = "stanjeRuTSE";
-            this.stanjeRuTSE.Size = new System.Drawing.Size(49, 19);
+            this.stanjeRuTSE.Size = new System.Drawing.Size(119, 19);
             this.stanjeRuTSE.TabIndex = 63;
             this.stanjeRuTSE.Text = "Stanje:";
+            this.stanjeRuTSE.TextAlign = System.Drawing.ContentAlignment.TopRight;
             // 
             // ispravnostIrTSE
             // 
@@ -847,10 +858,18 @@
             // izbornik
             // 
             this.izbornik.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tSDToolStripMenuItem1,
             this.tSDToolStripMenuItem,
+            this.tSEToolStripMenuItem,
             this.toolStripMenuItem1});
             this.izbornik.Name = "izbornik";
-            this.izbornik.Size = new System.Drawing.Size(100, 48);
+            this.izbornik.Size = new System.Drawing.Size(100, 92);
+            // 
+            // tSDToolStripMenuItem1
+            // 
+            this.tSDToolStripMenuItem1.Name = "tSDToolStripMenuItem1";
+            this.tSDToolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
+            this.tSDToolStripMenuItem1.Text = "TS-D";
             // 
             // tSDToolStripMenuItem
             // 
@@ -901,6 +920,12 @@
             this.nadstrujnaZaštitaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
             this.nadstrujnaZaštitaToolStripMenuItem.Text = "Nadstrujna zaštita";
             // 
+            // tSEToolStripMenuItem
+            // 
+            this.tSEToolStripMenuItem.Name = "tSEToolStripMenuItem";
+            this.tSEToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.tSEToolStripMenuItem.Text = "TS-E";
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -911,7 +936,7 @@
             this.toolStripMenuItem6,
             this.toolStripMenuItem7});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
             this.toolStripMenuItem1.Text = "TS-E";
             // 
             // toolStripMenuItem2
@@ -926,14 +951,14 @@
             // sR1ToolStripMenuItem
             // 
             this.sR1ToolStripMenuItem.Name = "sR1ToolStripMenuItem";
-            this.sR1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sR1ToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.sR1ToolStripMenuItem.Text = "SR1";
             this.sR1ToolStripMenuItem.Click += new System.EventHandler(this.sR1ToolStripMenuItem_Click);
             // 
             // sR2ToolStripMenuItem
             // 
             this.sR2ToolStripMenuItem.Name = "sR2ToolStripMenuItem";
-            this.sR2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sR2ToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
             this.sR2ToolStripMenuItem.Text = "SR2";
             this.sR2ToolStripMenuItem.Click += new System.EventHandler(this.sR2ToolStripMenuItem_Click);
             // 
@@ -993,12 +1018,25 @@
             this.prikazSvihSignala.UseVisualStyleBackColor = true;
             this.prikazSvihSignala.Click += new System.EventHandler(this.prikazSvihSignala_Click);
             // 
+            // dvButton
+            // 
+            this.dvButton.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dvButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.dvButton.Location = new System.Drawing.Point(584, 549);
+            this.dvButton.Name = "dvButton";
+            this.dvButton.Size = new System.Drawing.Size(94, 34);
+            this.dvButton.TabIndex = 76;
+            this.dvButton.Text = "Uključi DV";
+            this.dvButton.UseVisualStyleBackColor = true;
+            this.dvButton.Click += new System.EventHandler(this.dvButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.InactiveCaption;
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dvButton);
             this.Controls.Add(this.prikazSvihSignala);
             this.Controls.Add(this.prikazTrenutnihSignala);
             this.Controls.Add(this.ispravnostSr2TSE);
@@ -1024,7 +1062,7 @@
             this.Controls.Add(this.uzemljenjeTSE);
             this.Controls.Add(this.uzemljenjeTSD);
             this.Controls.Add(this.dvRuTSE);
-            this.Controls.Add(this.pictureBox18);
+            this.Controls.Add(this.uRuTSE);
             this.Controls.Add(this.uRuTSD);
             this.Controls.Add(this.cvor16);
             this.Controls.Add(this.cvor13);
@@ -1056,17 +1094,17 @@
             this.Controls.Add(this.cvor6);
             this.Controls.Add(this.cvor7);
             this.Controls.Add(this.cvor5);
-            this.Controls.Add(this.sr2TSE);
-            this.Controls.Add(this.ruTSE);
-            this.Controls.Add(this.irTSE);
-            this.Controls.Add(this.prTSE);
-            this.Controls.Add(this.sr1TSE);
+            this.Controls.Add(this.sr2TSEButton);
+            this.Controls.Add(this.ruTSEButton);
+            this.Controls.Add(this.irTSEButton);
+            this.Controls.Add(this.prTSEButton);
+            this.Controls.Add(this.sr1TSEButton);
             this.Controls.Add(this.cvor4);
             this.Controls.Add(this.s1srTSD);
-            this.Controls.Add(this.ruTSD);
-            this.Controls.Add(this.irTSD);
-            this.Controls.Add(this.prTSD);
-            this.Controls.Add(this.srTSD);
+            this.Controls.Add(this.ruTSDButton);
+            this.Controls.Add(this.irTSDButton);
+            this.Controls.Add(this.prTSDButton);
+            this.Controls.Add(this.srTSDButton);
             this.Controls.Add(this.dv);
             this.Controls.Add(this.cvor1);
             this.Controls.Add(this.cvor3);
@@ -1111,7 +1149,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.cvor13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cvor16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.uRuTSD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.uRuTSE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvRuTSE)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dvTsTSE)).EndInit();
@@ -1130,17 +1168,17 @@
         private System.Windows.Forms.PictureBox cvor3;
         private System.Windows.Forms.PictureBox cvor1;
         private System.Windows.Forms.PictureBox dv;
-        private System.Windows.Forms.Button srTSD;
-        private System.Windows.Forms.Button prTSD;
-        private System.Windows.Forms.Button irTSD;
-        private System.Windows.Forms.Button ruTSD;
+        private System.Windows.Forms.Button srTSDButton;
+        private System.Windows.Forms.Button prTSDButton;
+        private System.Windows.Forms.Button irTSDButton;
+        private System.Windows.Forms.Button ruTSDButton;
         private System.Windows.Forms.PictureBox s1srTSD;
         private System.Windows.Forms.PictureBox cvor4;
-        private System.Windows.Forms.Button ruTSE;
-        private System.Windows.Forms.Button irTSE;
-        private System.Windows.Forms.Button prTSE;
-        private System.Windows.Forms.Button sr1TSE;
-        private System.Windows.Forms.Button sr2TSE;
+        private System.Windows.Forms.Button ruTSEButton;
+        private System.Windows.Forms.Button irTSEButton;
+        private System.Windows.Forms.Button prTSEButton;
+        private System.Windows.Forms.Button sr1TSEButton;
+        private System.Windows.Forms.Button sr2TSEButton;
         private System.Windows.Forms.PictureBox cvor5;
         private System.Windows.Forms.PictureBox cvor7;
         private System.Windows.Forms.PictureBox cvor6;
@@ -1172,7 +1210,7 @@
         private System.Windows.Forms.PictureBox cvor13;
         private System.Windows.Forms.PictureBox cvor16;
         private System.Windows.Forms.PictureBox uRuTSD;
-        private System.Windows.Forms.PictureBox pictureBox18;
+        private System.Windows.Forms.PictureBox uRuTSE;
         private System.Windows.Forms.PictureBox dvRuTSE;
         private System.Windows.Forms.Label uzemljenjeTSD;
         private System.Windows.Forms.Label uzemljenjeTSE;
@@ -1215,6 +1253,9 @@
         private System.Windows.Forms.ToolStripMenuItem sR2ToolStripMenuItem;
         private System.Windows.Forms.Button prikazTrenutnihSignala;
         private System.Windows.Forms.Button prikazSvihSignala;
+        private System.Windows.Forms.ToolStripMenuItem tSDToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tSEToolStripMenuItem;
+        private System.Windows.Forms.Button dvButton;
     }
 }
 

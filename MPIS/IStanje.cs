@@ -2,6 +2,6 @@
 
 public interface IStanje
 {
-	public void prikaziSignale();
-	public void prikaziSignaleTrenutni();
+	void PrikaziSignale();
+	void prikaziSignaleTrenutni();
 }

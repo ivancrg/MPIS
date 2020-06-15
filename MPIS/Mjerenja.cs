@@ -2,13 +2,28 @@
 
 public abstract class Mjerenja : IStanje
 {
-	private readonly string id;
-	private float vrijednost;
+	protected string id;
+	private float vrijednost = 0.0f;
 
 	//potrebna implementacija
-	public void osvjeziVrijednosti() { }
-	public float getVrijednosti() { }
+	public void osvjeziVrijednosti()
+    { 
+        //izracun vrijednosti
+        //vrijednost = ...
+    }
+	public float getVrijednost() {
+		return vrijednost;
+	}
 
+	public void PrikaziSignale()
+	{
+		throw new NotImplementedException();
+	}
+
+	public void prikaziSignaleTrenutni()
+	{
+		throw new NotImplementedException();
+	}
 }
 
 public class Watmetar : Mjerenja {
@@ -19,17 +34,26 @@ public class Watmetar : Mjerenja {
 		this.tip = tip;
     }
 
-	public float getSnaga() { }
+	public float getSnaga()
+	{
+		return getVrijednost();
+	}
 }
 
 public class Voltmetar : Mjerenja {
     public Voltmetar(string id) => this.id = id;
-	public float getNapon() { }
+	public float getNapon()
+    {
+        return getVrijednost();
+    }
 }
 
 public class Ampermetar : Mjerenja {
 	public Ampermetar(string id) => this.id = id;
-	public float getJakostStruje() { }
+	public float getJakostStruje()
+    {
+        return getVrijednost();
+    }
 }
 
 public class Brojilo : Mjerenja {
@@ -38,7 +62,7 @@ public class Brojilo : Mjerenja {
 
 	public Brojilo(string id, bool tip) {
 		this.id = id;
-		this.Tip = tip;
+		this.tip = tip;
     }
 
     public bool Alarm { get => alarm; set => alarm = value; }

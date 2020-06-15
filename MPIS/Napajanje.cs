@@ -2,7 +2,7 @@
 
 public class Napajanje {
 	private readonly string id;
-	private enum stanje {
+	public enum stanje {
 		prvo,
 		drugo
 	}
@@ -16,11 +16,28 @@ public class Napajanje {
 	}
 
 	//potrebno dodati implementaciju
-	public stanje provjeraPrekidac(Prekidac prekidac) { }
-	public stanje provjeraRastavljac(Rastavljac rastavljac) { }
-	public stanje provjeraAPU(APU apu) { }
-	public stanje provjeraZastita(Zastita zastita) { }
-	public string uredajiNapajanje() { }
-	public string uredajiBezNapajanja() { }
-	
+	public stanje provjeraPrekidac(Prekidac prekidac)
+	{
+		return stanje.prvo;
+	}
+	public stanje provjeraRastavljac(Rastavljac rastavljac)
+	{
+		return stanje.prvo;
+	}
+	public stanje provjeraAPU(APU apu)
+	{
+		return stanje.prvo;
+	}
+	public stanje provjeraZastita(Zastita zastita)
+	{
+		return stanje.prvo;
+	}
+	public string uredajiNapajanje() 
+	{
+		return null;
+	}
+	public string uredajiBezNapajanja() 
+	{
+		return null;
+	}
 }

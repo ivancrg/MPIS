@@ -10,29 +10,35 @@ public class DVPolje
 	private bool stanje;
 	private float napon;
 
-	private bool unutarnjaSmetnjaIskljucenje(){
+	private bool unutarnjaSmetnjaIskljucenje()
+	{
+		return false;
+	}
 
-    }
+	private bool ostaleZastiteIskljucene()
+	{
+		return false;
+	}
 
-	private bool ostaleZastiteIskljucene(){
+	private bool zastiteUpozorenje()
+	{
+		return false;
+	}
 
-    }
+	private bool primarnaOpremaUpozorenje()
+	{
+		return false;
+	}
 
-	private bool zastiteUpozorenje(){
+	private bool sekundarnaOpremaUpozorenje()
+	{
+		return false;
+	}
 
-    }
-
-	private bool primarnaOpremaUpozorenje(){
-
-    }
-
-	private bool sekundarnaOpremaUpozorenje(){
-
-    }
-
-	private bool pomocniUredaji(){
-
-    }
+	private bool pomocniUredaji()
+	{
+		return false;
+	}
 
 	public string getIme(){
 		return ime;
