@@ -113,6 +113,11 @@
             this.apuTSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dzTSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.znTSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mjerenjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.wattTSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ampTSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltTSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.brTSDToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tSEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
@@ -124,21 +129,16 @@
             this.apuTSEToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.dzTSEToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.znTSEToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.wattTSEToolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ampTSEToolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
+            this.voltTSEToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.brTSEToolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             this.prikazTrenutnihSignalaButton = new System.Windows.Forms.Button();
             this.prikazSvihSignalaButton = new System.Windows.Forms.Button();
             this.dvButton = new System.Windows.Forms.Button();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.prikazGrupnihSignalaButton = new System.Windows.Forms.Button();
-            this.mjerenjaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.wattmetarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ampermetarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voltmetarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.brojiloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.s1TSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s2TSE)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.s1TSD)).BeginInit();
@@ -877,12 +877,12 @@
             this.tSEToolStripMenuItem,
             this.toolStripMenuItem1});
             this.izbornik.Name = "izbornik";
-            this.izbornik.Size = new System.Drawing.Size(100, 92);
+            this.izbornik.Size = new System.Drawing.Size(181, 114);
             // 
             // tSDToolStripMenuItem1
             // 
             this.tSDToolStripMenuItem1.Name = "tSDToolStripMenuItem1";
-            this.tSDToolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
+            this.tSDToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.tSDToolStripMenuItem1.Text = "TS-D";
             this.tSDToolStripMenuItem1.Click += new System.EventHandler(this.tSDToolStripMenuItem1_Click);
             // 
@@ -898,7 +898,7 @@
             this.znTSDToolStripMenuItem,
             this.mjerenjaToolStripMenuItem});
             this.tSDToolStripMenuItem.Name = "tSDToolStripMenuItem";
-            this.tSDToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.tSDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tSDToolStripMenuItem.Text = "TS-D";
             // 
             // srTSDToolStripMenuItem
@@ -950,10 +950,49 @@
             this.znTSDToolStripMenuItem.Text = "Nadstrujna zaštita";
             this.znTSDToolStripMenuItem.Click += new System.EventHandler(this.znTSDToolStripMenuItem_Click);
             // 
+            // mjerenjaToolStripMenuItem
+            // 
+            this.mjerenjaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wattTSDToolStripMenuItem,
+            this.ampTSDToolStripMenuItem,
+            this.voltTSDToolStripMenuItem,
+            this.brTSDToolStripMenuItem});
+            this.mjerenjaToolStripMenuItem.Name = "mjerenjaToolStripMenuItem";
+            this.mjerenjaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.mjerenjaToolStripMenuItem.Text = "Mjerenja";
+            // 
+            // wattTSDToolStripMenuItem
+            // 
+            this.wattTSDToolStripMenuItem.Name = "wattTSDToolStripMenuItem";
+            this.wattTSDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.wattTSDToolStripMenuItem.Text = "Wattmetar";
+            this.wattTSDToolStripMenuItem.Click += new System.EventHandler(this.wattTSDToolStripMenuItem_Click);
+            // 
+            // ampTSDToolStripMenuItem
+            // 
+            this.ampTSDToolStripMenuItem.Name = "ampTSDToolStripMenuItem";
+            this.ampTSDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ampTSDToolStripMenuItem.Text = "Ampermetar";
+            this.ampTSDToolStripMenuItem.Click += new System.EventHandler(this.ampTSDToolStripMenuItem_Click);
+            // 
+            // voltTSDToolStripMenuItem
+            // 
+            this.voltTSDToolStripMenuItem.Name = "voltTSDToolStripMenuItem";
+            this.voltTSDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.voltTSDToolStripMenuItem.Text = "Voltmetar";
+            this.voltTSDToolStripMenuItem.Click += new System.EventHandler(this.voltTSDToolStripMenuItem_Click);
+            // 
+            // brTSDToolStripMenuItem
+            // 
+            this.brTSDToolStripMenuItem.Name = "brTSDToolStripMenuItem";
+            this.brTSDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.brTSDToolStripMenuItem.Text = "Brojilo";
+            this.brTSDToolStripMenuItem.Click += new System.EventHandler(this.brTSDToolStripMenuItem_Click);
+            // 
             // tSEToolStripMenuItem
             // 
             this.tSEToolStripMenuItem.Name = "tSEToolStripMenuItem";
-            this.tSEToolStripMenuItem.Size = new System.Drawing.Size(99, 22);
+            this.tSEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tSEToolStripMenuItem.Text = "TS-E";
             this.tSEToolStripMenuItem.Click += new System.EventHandler(this.tSEToolStripMenuItem_Click);
             // 
@@ -969,7 +1008,7 @@
             this.znTSEToolStripMenuItem7,
             this.toolStripMenuItem3});
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(99, 22);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.toolStripMenuItem1.Text = "TS-E";
             // 
             // toolStripMenuItem2
@@ -1037,6 +1076,45 @@
             this.znTSEToolStripMenuItem7.Text = "Nadstrujna zaštita";
             this.znTSEToolStripMenuItem7.Click += new System.EventHandler(this.znTSEToolStripMenuItem7_Click);
             // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.wattTSEToolStripMenuItem4,
+            this.ampTSEToolStripMenuItem5,
+            this.voltTSEToolStripMenuItem6,
+            this.brTSEToolStripMenuItem7});
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(186, 22);
+            this.toolStripMenuItem3.Text = "Mjerenja";
+            // 
+            // wattTSEToolStripMenuItem4
+            // 
+            this.wattTSEToolStripMenuItem4.Name = "wattTSEToolStripMenuItem4";
+            this.wattTSEToolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
+            this.wattTSEToolStripMenuItem4.Text = "Wattmetar";
+            this.wattTSEToolStripMenuItem4.Click += new System.EventHandler(this.wattTSEToolStripMenuItem_Click);
+            // 
+            // ampTSEToolStripMenuItem5
+            // 
+            this.ampTSEToolStripMenuItem5.Name = "ampTSEToolStripMenuItem5";
+            this.ampTSEToolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
+            this.ampTSEToolStripMenuItem5.Text = "Ampermetar";
+            this.ampTSEToolStripMenuItem5.Click += new System.EventHandler(this.ampTSEToolStripMenuItem_Click);
+            // 
+            // voltTSEToolStripMenuItem6
+            // 
+            this.voltTSEToolStripMenuItem6.Name = "voltTSEToolStripMenuItem6";
+            this.voltTSEToolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
+            this.voltTSEToolStripMenuItem6.Text = "Voltmetar";
+            this.voltTSEToolStripMenuItem6.Click += new System.EventHandler(this.voltTSEToolStripMenuItem_Click);
+            // 
+            // brTSEToolStripMenuItem7
+            // 
+            this.brTSEToolStripMenuItem7.Name = "brTSEToolStripMenuItem7";
+            this.brTSEToolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
+            this.brTSEToolStripMenuItem7.Text = "Brojilo";
+            this.brTSEToolStripMenuItem7.Click += new System.EventHandler(this.brTSEToolStripMenuItem_Click);
+            // 
             // prikazTrenutnihSignalaButton
             // 
             this.prikazTrenutnihSignalaButton.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
@@ -1097,76 +1175,6 @@
             this.prikazGrupnihSignalaButton.Text = "Prikaz grupnih signala";
             this.prikazGrupnihSignalaButton.UseVisualStyleBackColor = true;
             this.prikazGrupnihSignalaButton.Click += new System.EventHandler(this.prikazGrupnihSignalaButton_Click);
-            // 
-            // mjerenjaToolStripMenuItem
-            // 
-            this.mjerenjaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.wattmetarToolStripMenuItem,
-            this.ampermetarToolStripMenuItem,
-            this.voltmetarToolStripMenuItem,
-            this.brojiloToolStripMenuItem});
-            this.mjerenjaToolStripMenuItem.Name = "mjerenjaToolStripMenuItem";
-            this.mjerenjaToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
-            this.mjerenjaToolStripMenuItem.Text = "Mjerenja";
-            // 
-            // wattmetarToolStripMenuItem
-            // 
-            this.wattmetarToolStripMenuItem.Name = "wattmetarToolStripMenuItem";
-            this.wattmetarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.wattmetarToolStripMenuItem.Text = "Wattmetar";
-            // 
-            // ampermetarToolStripMenuItem
-            // 
-            this.ampermetarToolStripMenuItem.Name = "ampermetarToolStripMenuItem";
-            this.ampermetarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ampermetarToolStripMenuItem.Text = "Ampermetar";
-            // 
-            // voltmetarToolStripMenuItem
-            // 
-            this.voltmetarToolStripMenuItem.Name = "voltmetarToolStripMenuItem";
-            this.voltmetarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.voltmetarToolStripMenuItem.Text = "Voltmetar";
-            // 
-            // brojiloToolStripMenuItem
-            // 
-            this.brojiloToolStripMenuItem.Name = "brojiloToolStripMenuItem";
-            this.brojiloToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.brojiloToolStripMenuItem.Text = "Brojilo";
-            // 
-            // toolStripMenuItem3
-            // 
-            this.toolStripMenuItem3.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem4,
-            this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7});
-            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(186, 22);
-            this.toolStripMenuItem3.Text = "Mjerenja";
-            // 
-            // toolStripMenuItem4
-            // 
-            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem4.Text = "Wattmetar";
-            // 
-            // toolStripMenuItem5
-            // 
-            this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem5.Text = "Ampermetar";
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem6.Text = "Voltmetar";
-            // 
-            // toolStripMenuItem7
-            // 
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Size = new System.Drawing.Size(180, 22);
-            this.toolStripMenuItem7.Text = "Brojilo";
             // 
             // Form1
             // 
@@ -1401,15 +1409,15 @@
         private System.Windows.Forms.ToolStripMenuItem prTSEToolStripMenuItem1;
         private System.Windows.Forms.Button prikazGrupnihSignalaButton;
         private System.Windows.Forms.ToolStripMenuItem mjerenjaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem wattmetarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ampermetarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voltmetarToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem brojiloToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem wattTSDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ampTSDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voltTSDToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem brTSDToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
+        private System.Windows.Forms.ToolStripMenuItem wattTSEToolStripMenuItem4;
+        private System.Windows.Forms.ToolStripMenuItem ampTSEToolStripMenuItem5;
+        private System.Windows.Forms.ToolStripMenuItem voltTSEToolStripMenuItem6;
+        private System.Windows.Forms.ToolStripMenuItem brTSEToolStripMenuItem7;
     }
 }
 

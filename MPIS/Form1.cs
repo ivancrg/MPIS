@@ -591,48 +591,57 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                srTSD.PrikaziSignale();
-                prTSD.PrikaziSignale();
-                irTSD.PrikaziSignale();
-                ruTSD.PrikaziSignale();
-                apuTSD.PrikaziSignale();
-                zdTSD.PrikaziSignale();
-                znTSD.PrikaziSignale();
-                zzTSD.PrikaziSignale();
-                wattTSD.PrikaziSignale();
-                voltTSD.PrikaziSignale();
-                ampTSD.PrikaziSignale();
-                brTSD.PrikaziSignale();
+                string text;
+                richTextBox1.Clear();
+                text = srTSD.PrikaziSignale();
+                text += prTSD.PrikaziSignale();
+                text += irTSD.PrikaziSignale();
+                text += ruTSD.PrikaziSignale();
+                text += apuTSD.PrikaziSignale();
+                text += zdTSD.PrikaziSignale();
+                text += znTSD.PrikaziSignale();
+                text += zzTSD.PrikaziSignale();
+                text += wattTSD.PrikaziSignale();
+                text += voltTSD.PrikaziSignale();
+                text += ampTSD.PrikaziSignale();
+                text += brTSD.PrikaziSignale();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                srTSD.prikaziSignaleTrenutni();
-                prTSD.prikaziSignaleTrenutni();
-                irTSD.prikaziSignaleTrenutni();
-                ruTSD.prikaziSignaleTrenutni();
-                apuTSD.prikaziSignaleTrenutni();
-                zdTSD.prikaziSignaleTrenutni();
-                znTSD.prikaziSignaleTrenutni();
-                zzTSD.prikaziSignaleTrenutni();
-                wattTSD.prikaziSignaleTrenutni();
-                voltTSD.prikaziSignaleTrenutni();
-                ampTSD.prikaziSignaleTrenutni();
-                brTSD.prikaziSignaleTrenutni();
-            }
+                string text;
+                richTextBox1.Clear();
+                text = srTSD.prikaziSignaleTrenutni();
+                text += prTSD.prikaziSignaleTrenutni();
+                text += irTSD.prikaziSignaleTrenutni();
+                text += ruTSD.prikaziSignaleTrenutni();
+                text += apuTSD.prikaziSignaleTrenutni();
+                text += zdTSD.prikaziSignaleTrenutni();
+                text += znTSD.prikaziSignaleTrenutni();
+                text += zzTSD.prikaziSignaleTrenutni();
+                text += wattTSD.prikaziSignaleTrenutni();
+                text += voltTSD.prikaziSignaleTrenutni();
+                text += ampTSD.prikaziSignaleTrenutni();
+                text += brTSD.prikaziSignaleTrenutni();
+                richTextBox1.Text = text;
+            }   
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                srTSD.prikaziSignaleGrupni();
-                prTSD.prikaziSignaleGrupni();
-                irTSD.prikaziSignaleGrupni();
-                ruTSD.prikaziSignaleGrupni();
-                apuTSD.prikaziSignaleGrupni();
-                zdTSD.prikaziSignaleGrupni();
-                znTSD.prikaziSignaleGrupni();
-                zzTSD.prikaziSignaleGrupni();
-                wattTSD.prikaziSignaleGrupni();
-                voltTSD.prikaziSignaleGrupni();
-                ampTSD.prikaziSignaleGrupni();
-                brTSD.prikaziSignaleGrupni();
+                string text;
+                richTextBox1.Clear();
+                text = srTSD.prikaziSignaleGrupni();
+                text += prTSD.prikaziSignaleGrupni();
+                text += irTSD.prikaziSignaleGrupni();
+                text += ruTSD.prikaziSignaleGrupni();
+                text += apuTSD.prikaziSignaleGrupni();
+                text += zdTSD.prikaziSignaleGrupni();
+                text += znTSD.prikaziSignaleGrupni();
+                text += zzTSD.prikaziSignaleGrupni();
+                text += wattTSD.prikaziSignaleGrupni();
+                text += voltTSD.prikaziSignaleGrupni();
+                text += ampTSD.prikaziSignaleGrupni();
+                text += brTSD.prikaziSignaleGrupni();
+                richTextBox1.Text = text;
             }
         }
 
@@ -642,51 +651,60 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                sr1TSE.PrikaziSignale();
-                sr2TSE.PrikaziSignale();
-                prTSE.PrikaziSignale();
-                irTSE.PrikaziSignale();
-                ruTSE.PrikaziSignale();
-                apuTSE.PrikaziSignale();
-                zdTSE.PrikaziSignale();
-                znTSE.PrikaziSignale();
-                zzTSE.PrikaziSignale();
-                wattTSE.PrikaziSignale();
-                voltTSE.PrikaziSignale();
-                ampTSE.PrikaziSignale();
-                brTSE.PrikaziSignale();
+                string text;
+                richTextBox1.Clear();
+                text = sr1TSE.PrikaziSignale();
+                text += sr2TSE.PrikaziSignale();
+                text += prTSE.PrikaziSignale();
+                text += irTSE.PrikaziSignale();
+                text += ruTSE.PrikaziSignale();
+                text += apuTSE.PrikaziSignale();
+                text += zdTSE.PrikaziSignale();
+                text += znTSE.PrikaziSignale();
+                text += zzTSE.PrikaziSignale();
+                text += wattTSE.PrikaziSignale();
+                text += voltTSE.PrikaziSignale();
+                text += ampTSE.PrikaziSignale();
+                text += brTSE.PrikaziSignale();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                sr1TSE.prikaziSignaleTrenutni();
-                sr2TSE.prikaziSignaleTrenutni();
-                prTSE.prikaziSignaleTrenutni();
-                irTSE.prikaziSignaleTrenutni();
-                ruTSE.prikaziSignaleTrenutni();
-                apuTSE.prikaziSignaleTrenutni();
-                zdTSE.prikaziSignaleTrenutni();
-                znTSE.prikaziSignaleTrenutni();
-                zzTSE.prikaziSignaleTrenutni();
-                wattTSE.prikaziSignaleTrenutni();
-                voltTSE.prikaziSignaleTrenutni();
-                ampTSE.prikaziSignaleTrenutni();
-                brTSE.prikaziSignaleTrenutni();
+                string text;
+                richTextBox1.Clear();
+                text = sr1TSE.prikaziSignaleTrenutni();
+                text += sr2TSE.prikaziSignaleTrenutni();
+                text += prTSE.prikaziSignaleTrenutni();
+                text += irTSE.prikaziSignaleTrenutni();
+                text += ruTSE.prikaziSignaleTrenutni();
+                text += apuTSE.prikaziSignaleTrenutni();
+                text += zdTSE.prikaziSignaleTrenutni();
+                text += znTSE.prikaziSignaleTrenutni();
+                text += zzTSE.prikaziSignaleTrenutni();
+                text += wattTSE.prikaziSignaleTrenutni();
+                text += voltTSE.prikaziSignaleTrenutni();
+                text += ampTSE.prikaziSignaleTrenutni();
+                text += brTSE.prikaziSignaleTrenutni();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                sr1TSE.prikaziSignaleGrupni();
-                sr2TSE.prikaziSignaleGrupni();
-                prTSE.prikaziSignaleGrupni();
-                irTSE.prikaziSignaleGrupni();
-                ruTSE.prikaziSignaleGrupni();
-                apuTSE.prikaziSignaleGrupni();
-                zdTSE.prikaziSignaleGrupni();
-                znTSE.prikaziSignaleGrupni();
-                zzTSE.prikaziSignaleGrupni();
-                wattTSE.prikaziSignaleGrupni();
-                voltTSE.prikaziSignaleGrupni();
-                ampTSE.prikaziSignaleGrupni();
-                brTSE.prikaziSignaleGrupni();
+                string text;
+                richTextBox1.Clear();
+                text = sr1TSE.prikaziSignaleGrupni();
+                text += sr2TSE.prikaziSignaleGrupni();
+                text += prTSE.prikaziSignaleGrupni();
+                text += irTSE.prikaziSignaleGrupni();
+                text += ruTSE.prikaziSignaleGrupni();
+                text += apuTSE.prikaziSignaleGrupni();
+                text += zdTSE.prikaziSignaleGrupni();
+                text += znTSE.prikaziSignaleGrupni();
+                text += zzTSE.prikaziSignaleGrupni();
+                text += wattTSE.prikaziSignaleGrupni();
+                text += voltTSE.prikaziSignaleGrupni();
+                text += ampTSE.prikaziSignaleGrupni();
+                text += brTSE.prikaziSignaleGrupni();
+                richTextBox1.Text = text;
             }
         }
 
@@ -696,15 +714,24 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                srTSD.PrikaziSignale();
+                string text;
+                richTextBox1.Clear();
+                text = srTSD.PrikaziSignale();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                srTSD.prikaziSignaleTrenutni();
+                string text;
+                richTextBox1.Clear();
+                text = srTSD.prikaziSignaleTrenutni();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                srTSD.prikaziSignaleGrupni();
+                string text;
+                richTextBox1.Clear();
+                text = srTSD.prikaziSignaleGrupni();
+                richTextBox1.Text = text;
             }
         }
 
@@ -738,15 +765,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = irTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = irTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = irTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -756,15 +789,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = ruTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = ruTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = ruTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -772,17 +811,23 @@ namespace MPIS
         {
             Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
 
-            if (buttonInitiated == prikazSvihSignalaButton)
+            if(buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = apuTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = apuTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = apuTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -792,15 +837,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = zdTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = zdTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = zdTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -810,15 +861,116 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = znTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = znTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = znTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+        private void wattTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = wattTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = wattTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = wattTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void ampTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = ampTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = ampTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = ampTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void voltTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = voltTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = voltTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = voltTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void brTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = brTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = brTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = brTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -828,15 +980,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = sr1TSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = sr1TSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = sr1TSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -846,15 +1004,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = sr2TSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = sr2TSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = sr2TSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -864,15 +1028,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = prTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = prTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = prTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -882,15 +1052,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = irTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = irTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = irTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -900,15 +1076,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = ruTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = ruTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = ruTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -918,15 +1100,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = apuTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = apuTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = apuTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -936,15 +1124,21 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = zdTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = zdTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = zdTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
 
@@ -954,15 +1148,117 @@ namespace MPIS
 
             if (buttonInitiated == prikazSvihSignalaButton)
             {
-                //prikaz svih signala
+                string text = znTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazTrenutnihSignalaButton)
             {
-                //prikaz trenutnih signala
+                string text = znTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
             else if (buttonInitiated == prikazGrupnihSignalaButton)
             {
-                //prikaz grupnih signala
+                string text = znTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void wattTSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = wattTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = wattTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = wattTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void ampTSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = ampTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = ampTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = ampTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void voltTSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = voltTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = voltTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = voltTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void brTSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = brTSE.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = brTSE.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = brTSE.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
             }
         }
     }
