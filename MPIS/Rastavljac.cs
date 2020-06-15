@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 using System.Windows.Forms;
 
 //klasa rastavljac koju će nasljediti daljnji tipovi rastavljaca
@@ -6,6 +7,7 @@ public abstract class Rastavljac : IStanje {
 
 	protected string id;
 	protected string ime;
+	protected bool komanda;
 
 	public enum stanje
 	{
@@ -55,14 +57,36 @@ public abstract class Rastavljac : IStanje {
 		throw new NotImplementedException();
 	}
 
-	public void PrikaziSignale()
+	public string PrikaziSignale()
 	{
-		throw new NotImplementedException();
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine(ime + " komanda isklop");
+		sb.AppendLine(ime + " komanda uklop");
+		sb.AppendLine(ime + " stanje međupoložaj");
+		sb.AppendLine(ime + " stanje isključen");
+		sb.AppendLine(ime + " stanje uključen");
+		sb.AppendLine(ime + " stanje kvar signalizacije");
+		sb.AppendLine("");
+
+		return sb.ToString();
 	}
 
-	public void prikaziSignaleTrenutni()
+	public string prikaziSignaleTrenutni()
 	{
-		throw new NotImplementedException();
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine(ime + " komanda " + ((komanda) ? ("uklop") : ("isklop")));
+		sb.AppendLine(ime + " stanje " + getStanje());
+		sb.AppendLine("");
+
+		return sb.ToString();
+	}
+
+	public string prikaziSignaleGrupni()
+	{
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine("");
+
+		return sb.ToString();
 	}
 }
 
@@ -85,9 +109,10 @@ public class RastavljacIzlazni : Rastavljac {
 			return false;
 		}
 
+		komanda = true;
 		setStanje(stanje.uključen);
 
-		MessageBox.Show("Izlazni rastavljač uključen.");
+		//MessageBox.Show("Izlazni rastavljač uključen.");
 
 		return true;
 	}
@@ -100,9 +125,10 @@ public class RastavljacIzlazni : Rastavljac {
 			return false;
 		}
 
+		komanda = false;
 		setStanje(stanje.isključen);
 
-		MessageBox.Show("Izlazni rastavljač isključen.");
+		//MessageBox.Show("Izlazni rastavljač isključen.");
 
 		return true;
 	}
@@ -129,9 +155,10 @@ public class RastavljacSabirnicki : Rastavljac {
 			return false;
 		}
 
+		komanda = true;
 		setStanje(stanje.uključen);
 
-		MessageBox.Show("Sabirnički rastavljač uključen.");
+		//MessageBox.Show("Sabirnički rastavljač uključen.");
 
 		return true;
 	}
@@ -144,9 +171,10 @@ public class RastavljacSabirnicki : Rastavljac {
 			return false;
 		}
 
+		komanda = true;
 		setStanje(stanje.uključen);
 
-		MessageBox.Show("Sabirnički rastavljač uključen.");
+		//MessageBox.Show("Sabirnički rastavljač uključen.");
 
 		return true;
 	}
@@ -159,9 +187,10 @@ public class RastavljacSabirnicki : Rastavljac {
 			return false;
 		}
 
+		komanda = false;
 		setStanje(stanje.isključen);
 
-		MessageBox.Show("Sabirnički rastavljač isključen.");
+		//MessageBox.Show("Sabirnički rastavljač isključen.");
 
 		return true;
 	}
@@ -183,7 +212,7 @@ public class RastavljacUzemljenja : Rastavljac {
 
 		setStanje(stanje.uključen);
 
-		MessageBox.Show("Rastavljač uzemljenja uključen.");
+		//MessageBox.Show("Rastavljač uzemljenja uključen.");
 
 		return true;
 	}
@@ -198,8 +227,29 @@ public class RastavljacUzemljenja : Rastavljac {
 
 		setStanje(stanje.isključen);
 
-		MessageBox.Show("Sabirnički rastavljač isključen.");
+		//MessageBox.Show("Sabirnički rastavljač isključen.");
 
 		return true;
+	}
+
+	new public string PrikaziSignale()
+	{
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine(ime + " stanje međupoložaj");
+		sb.AppendLine(ime + " stanje isključen");
+		sb.AppendLine(ime + " stanje uključen");
+		sb.AppendLine(ime + " stanje kvar signalizacije");
+		sb.AppendLine("");
+
+		return sb.ToString();
+	}
+
+	new public string prikaziSignaleTrenutni()
+	{
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine(ime + " stanje " + getStanje());
+		sb.AppendLine("");
+
+		return sb.ToString();
 	}
 }

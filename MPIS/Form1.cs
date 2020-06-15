@@ -23,8 +23,12 @@ namespace MPIS
         ZastitaDistantna zdTSD = new ZastitaDistantna("TS-D 110 DV zaštita distantna", "1");
         ZastitaNadstrujna znTSD = new ZastitaNadstrujna("TS-D 110 DV zaštita nadstrujna", "1");
         ZastitaZemljospojna zzTSD = new ZastitaZemljospojna("TS-D 110 DV zaštita zemljospojna", "1");
-        APU apuTSD = new APU("TS-D 110 DV zaštita distantna_APU", "1");
+        APU apuTSD = new APU("TS-D 110 DV zaštita distantna APU", "1");
         Napajanje napTSD = new Napajanje("1");
+        Watmetar wattTSD = new Watmetar("TS-D 110 DV mjerni pretvornik", "1", true);
+        Voltmetar voltTSD = new Voltmetar("TS-D 110 DV mjerni pretvornik", "1");
+        Ampermetar ampTSD = new Ampermetar("TS-D 110 DV mjerni pretvornik", "1");
+        Brojilo brTSD = new Brojilo("TS-D 110 DV brojilo", "1", false);
 
         RastavljacSabirnicki sr1TSE = new RastavljacSabirnicki("TS-E 110 DV rastavljač S1", "2_1", 1);
         RastavljacSabirnicki sr2TSE = new RastavljacSabirnicki("TS-E 110 DV rastavljač S2", "2_1", 2);
@@ -34,8 +38,12 @@ namespace MPIS
         ZastitaDistantna zdTSE = new ZastitaDistantna("TS-E 110 DV zaštita distantna", "2");
         ZastitaNadstrujna znTSE = new ZastitaNadstrujna("TS-E 110 DV zaštita nadstrujna", "2");
         ZastitaZemljospojna zzTSE = new ZastitaZemljospojna("TS-E 110 DV zaštita zemljospojna", "2");
-        APU apuTSE = new APU("TS-E 110 DV zaštita distantna_APU", "2");
+        APU apuTSE = new APU("TS-E 110 DV zaštita distantna APU", "2");
         Napajanje napTSE = new Napajanje("2");
+        Watmetar wattTSE = new Watmetar("TS-E 110 DV mjerni pretvornik", "2", false);
+        Voltmetar voltTSE = new Voltmetar("TS-E 110 DV mjerni pretvornik", "2");
+        Ampermetar ampTSE = new Ampermetar("TS-E 110 DV mjerni pretvornik", "2");
+        Brojilo brTSE = new Brojilo("TS-E 110 DV brojilo", "2", true);
 
         private bool stanjeDaljinskoUpravljanje = true;
 
@@ -63,37 +71,6 @@ namespace MPIS
             dvTsTSE.BackColor = Color.Red;
 
             dvButton_Click(sender, e);
-        }
-
-        private void prikazSvihSignala_Click(object sender, EventArgs e)
-        {
-            izbornik.Show(prikazSvihSignala, 0, prikazSvihSignala.Height);
-        }
-
-        private void prikazTrenutnihSignala_Click(object sender, EventArgs e)
-        {
-            izbornik.Show(prikazTrenutnihSignala, 0, prikazTrenutnihSignala.Height);
-        }
-
-        private void sR1ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
-            
-            if (buttonInitiated == prikazSvihSignala)
-            {
-                MessageBox.Show("svi");
-                //prikaz svih signala za SR1 TSE
-            }
-            else if (buttonInitiated == prikazTrenutnihSignala)
-            {
-                MessageBox.Show("trenutni");
-                //prikaz trenutnih signala za SR1 TSE
-            }
-        }
-
-        private void sR2ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void srTSDButton_Click(object sender, EventArgs e)
@@ -590,6 +567,402 @@ namespace MPIS
                 stanjeRuTSE.ForeColor = Color.Green;
                 ispravnostRuTSE.ForeColor = Color.Green;
                 ispravnostRuTSE.Text = "Ispravno: DA";
+            }
+        }
+
+        private void prikazSvihSignalaButton_Click(object sender, EventArgs e)
+        {
+            izbornik.Show(prikazSvihSignalaButton, 0, prikazSvihSignalaButton.Height);
+        }
+
+        private void prikazTrenutnihSignalaButton_Click(object sender, EventArgs e)
+        {
+            izbornik.Show(prikazTrenutnihSignalaButton, 0, prikazTrenutnihSignalaButton.Height);
+        }
+
+        private void prikazGrupnihSignalaButton_Click(object sender, EventArgs e)
+        {
+            izbornik.Show(prikazGrupnihSignalaButton, 0, prikazGrupnihSignalaButton.Height);
+        }
+
+        private void tSDToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                srTSD.PrikaziSignale();
+                prTSD.PrikaziSignale();
+                irTSD.PrikaziSignale();
+                ruTSD.PrikaziSignale();
+                apuTSD.PrikaziSignale();
+                zdTSD.PrikaziSignale();
+                znTSD.PrikaziSignale();
+                zzTSD.PrikaziSignale();
+                wattTSD.PrikaziSignale();
+                voltTSD.PrikaziSignale();
+                ampTSD.PrikaziSignale();
+                brTSD.PrikaziSignale();
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                srTSD.prikaziSignaleTrenutni();
+                prTSD.prikaziSignaleTrenutni();
+                irTSD.prikaziSignaleTrenutni();
+                ruTSD.prikaziSignaleTrenutni();
+                apuTSD.prikaziSignaleTrenutni();
+                zdTSD.prikaziSignaleTrenutni();
+                znTSD.prikaziSignaleTrenutni();
+                zzTSD.prikaziSignaleTrenutni();
+                wattTSD.prikaziSignaleTrenutni();
+                voltTSD.prikaziSignaleTrenutni();
+                ampTSD.prikaziSignaleTrenutni();
+                brTSD.prikaziSignaleTrenutni();
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                srTSD.prikaziSignaleGrupni();
+                prTSD.prikaziSignaleGrupni();
+                irTSD.prikaziSignaleGrupni();
+                ruTSD.prikaziSignaleGrupni();
+                apuTSD.prikaziSignaleGrupni();
+                zdTSD.prikaziSignaleGrupni();
+                znTSD.prikaziSignaleGrupni();
+                zzTSD.prikaziSignaleGrupni();
+                wattTSD.prikaziSignaleGrupni();
+                voltTSD.prikaziSignaleGrupni();
+                ampTSD.prikaziSignaleGrupni();
+                brTSD.prikaziSignaleGrupni();
+            }
+        }
+
+        private void tSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                sr1TSE.PrikaziSignale();
+                sr2TSE.PrikaziSignale();
+                prTSE.PrikaziSignale();
+                irTSE.PrikaziSignale();
+                ruTSE.PrikaziSignale();
+                apuTSE.PrikaziSignale();
+                zdTSE.PrikaziSignale();
+                znTSE.PrikaziSignale();
+                zzTSE.PrikaziSignale();
+                wattTSE.PrikaziSignale();
+                voltTSE.PrikaziSignale();
+                ampTSE.PrikaziSignale();
+                brTSE.PrikaziSignale();
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                sr1TSE.prikaziSignaleTrenutni();
+                sr2TSE.prikaziSignaleTrenutni();
+                prTSE.prikaziSignaleTrenutni();
+                irTSE.prikaziSignaleTrenutni();
+                ruTSE.prikaziSignaleTrenutni();
+                apuTSE.prikaziSignaleTrenutni();
+                zdTSE.prikaziSignaleTrenutni();
+                znTSE.prikaziSignaleTrenutni();
+                zzTSE.prikaziSignaleTrenutni();
+                wattTSE.prikaziSignaleTrenutni();
+                voltTSE.prikaziSignaleTrenutni();
+                ampTSE.prikaziSignaleTrenutni();
+                brTSE.prikaziSignaleTrenutni();
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                sr1TSE.prikaziSignaleGrupni();
+                sr2TSE.prikaziSignaleGrupni();
+                prTSE.prikaziSignaleGrupni();
+                irTSE.prikaziSignaleGrupni();
+                ruTSE.prikaziSignaleGrupni();
+                apuTSE.prikaziSignaleGrupni();
+                zdTSE.prikaziSignaleGrupni();
+                znTSE.prikaziSignaleGrupni();
+                zzTSE.prikaziSignaleGrupni();
+                wattTSE.prikaziSignaleGrupni();
+                voltTSE.prikaziSignaleGrupni();
+                ampTSE.prikaziSignaleGrupni();
+                brTSE.prikaziSignaleGrupni();
+            }
+        }
+
+        private void srTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                srTSD.PrikaziSignale();
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                srTSD.prikaziSignaleTrenutni();
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                srTSD.prikaziSignaleGrupni();
+            }
+        }
+
+        private void prTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                string text = prTSD.PrikaziSignale();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                string text = prTSD.prikaziSignaleTrenutni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                string text = prTSD.prikaziSignaleGrupni();
+                richTextBox1.Clear();
+                richTextBox1.Text = text;
+            }
+        }
+
+        private void irTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void ruTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void apuTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void dzTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void znTSDToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void sr1TSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void sr2TSEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void prTSEToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void irTSEToolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void ruTSEToolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void apuTSEToolStripMenuItem5_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void dzTSEToolStripMenuItem6_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
+            }
+        }
+
+        private void znTSEToolStripMenuItem7_Click(object sender, EventArgs e)
+        {
+            Button buttonInitiated = (Button)izbornik.SourceControl; //koji smo button stisnuli
+
+            if (buttonInitiated == prikazSvihSignalaButton)
+            {
+                //prikaz svih signala
+            }
+            else if (buttonInitiated == prikazTrenutnihSignalaButton)
+            {
+                //prikaz trenutnih signala
+            }
+            else if (buttonInitiated == prikazGrupnihSignalaButton)
+            {
+                //prikaz grupnih signala
             }
         }
     }

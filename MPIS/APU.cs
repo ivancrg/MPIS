@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 public class APU : IStanje
 {
@@ -8,13 +9,6 @@ public class APU : IStanje
 		this.id = id;
 	}
 
-	public enum stanje
-	{
-		uključen,
-		isključen
-	}
-
-	private stanje trenutnoStanje = stanje.isključen;
 	private readonly string id;
 	private readonly string ime;
 	private bool ukljucenje;
@@ -29,12 +23,12 @@ public class APU : IStanje
 
 	public void ukljuci()
 	{
-		trenutnoStanje = stanje.uključen;
+		ukljucenje = true;
 	}
 
 	public void iskljuci()
 	{
-		trenutnoStanje = stanje.isključen;
+		ukljucenje = false;
 	}
 
 	public bool ukljuciPrekidac(Prekidac prekidac, RastavljacSabirnicki s1, RastavljacIzlazni ir, RastavljacUzemljenja ru)
@@ -47,20 +41,47 @@ public class APU : IStanje
 		return prekidac.ukljuci(s1, s2, ir, ru);
 	}
 
-	public stanje getStanje() { return trenutnoStanje; }
 
 	public void osvjeziVrijednosti() {
 		//potrebno dodati implementaciju
 		throw new NotImplementedException();
 	}
 
-	public void PrikaziSignale()
+	public string PrikaziSignale()
 	{
-		throw new NotImplementedException();
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine(ime + " APU uključenje prorada");
+		sb.AppendLine(ime + " APU uključenje prestanak");
+		sb.AppendLine(ime + " APU 1p prorada");
+		sb.AppendLine(ime + " APU 1p prestanak");
+		sb.AppendLine(ime + " APU 3p prorada");
+		sb.AppendLine(ime + " APU 3p prestanak");
+		sb.AppendLine(ime + " APU blokada prorada");
+		sb.AppendLine(ime + " APU blokada prestanak");
+		sb.AppendLine("");
+
+		return sb.ToString();
 	}
 
-	public void prikaziSignaleTrenutni()
+	public string prikaziSignaleTrenutni()
 	{
-		throw new NotImplementedException();
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine(ime + " APU uključenje " + ((ukljucenje) ? ("prorada") : ("prestanak")));
+		sb.AppendLine(ime + " APU 1p " + ((p1) ? ("prorada") : ("prestanak")));
+		sb.AppendLine(ime + " APU 3p " + ((p3) ? ("prorada") : ("prestanak")));
+		sb.AppendLine(ime + " APU blokada " + ((blokada) ? ("prorada") : ("prestanak")));
+		sb.AppendLine("");
+
+		return sb.ToString();
+	}
+
+	public string prikaziSignaleGrupni()
+	{
+		StringBuilder sb = new StringBuilder();
+		sb.AppendLine(ime + " APU blokada prorada");
+		sb.AppendLine(ime + " APU blokada prestanak");
+		sb.AppendLine("");
+
+		return sb.ToString();
 	}
 }

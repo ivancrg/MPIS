@@ -2,6 +2,7 @@
 
 public interface IStanje
 {
-	void PrikaziSignale();
-	void prikaziSignaleTrenutni();
+	string PrikaziSignale();
+	string prikaziSignaleTrenutni();
+	string prikaziSignaleGrupni();
 }
